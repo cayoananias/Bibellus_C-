@@ -11,6 +11,10 @@ namespace Bibellus_form_1._0
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
+        /// 
+        /// ver. 1.0.1 cmri systems.
+        /// Notas atualização 1.0.1
+        /// atualização de nomes de variaveis
         [STAThread]
         static void Main()
         {

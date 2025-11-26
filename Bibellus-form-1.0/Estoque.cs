@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace Bibellus_form_1._0
 {
-    public partial class Login : Form
+    public partial class Estoque : Form
     {
-        public Login()
+        public Estoque()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
