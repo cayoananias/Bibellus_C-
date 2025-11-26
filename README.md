@@ -35,15 +35,15 @@ Ideal para estudos, trabalhos acadêmicos, pequenos negócios ou como base para 
 
 ---
 
-## 🔧 Pré-requisitos
+##  Pré-requisitos
 
-- ✔ **.NET Framework ou .NET 6+**  
-- ✔ **Visual Studio**  
-- ✔ Windows (caso utilize Windows Forms)
+-  **.NET Framework ou .NET 6+**  
+-  **Visual Studio**  
+-  Windows (caso utilize Windows Forms)
 
 ---
 
-## 🚀 Como instalar e executar
+##  Como instalar e executar
 
 1. Clone o repositório:
    
