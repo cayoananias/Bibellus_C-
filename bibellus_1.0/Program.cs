@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data.SqlClient;
 
@@ -6,7 +6,7 @@ namespace bibellus
 {
     class Program
     {
-        static string conexaoString = "server=localhost;uid=root;pwd=;database=bibellus";
+        static string conexaoString = "server=localhost;uid=root;pwd=root;database=bibellus";
 
         static void Main(string[] args)
         {
@@ -108,7 +108,7 @@ namespace bibellus
                     using (var con = new MySqlConnection(conexaoString))
                     {
                         con.Open();
-                        string sql = "INSERT INTO vendas (data, hora, pagamento, valor, observacao) VALUES (CURDATE(), CURTIME(), @p, @v, '')";
+                        string sql = "INSERT INTO vendas (hora, pagamento, valor, observacao) VALUES (CURRENT_TIME(), @p, @v, '')";
                         MySqlCommand cmd = new MySqlCommand(sql, con);
                         cmd.Parameters.AddWithValue("@p", pagamento);
                         cmd.Parameters.AddWithValue("@v", preco);
@@ -136,14 +136,14 @@ namespace bibellus
                     using (var con = new MySqlConnection(conexaoString))
                     {
                         con.Open();
-                        string sql = "SELECT id, data, pagamento, valor FROM vendas ORDER BY id DESC";
+                        string sql = "SELECT id, hora, pagamento, valor FROM vendas ORDER BY id DESC";
                         MySqlCommand cmd = new MySqlCommand(sql, con);
                         MySqlDataReader r = cmd.ExecuteReader();
 
                         while (r.Read())
                         {
                             Console.WriteLine(
-                                $"ID {r["id"]} | Data: {r["data"]} | Pagamento: {r["pagamento"]} | Valor: {r["valor"]}"
+                                $"ID {r["id"]} | Data: {r["hora"]} | Pagamento: {r["pagamento"]} | Valor: {r["valor"]}"
                             );
                         }
                     }
