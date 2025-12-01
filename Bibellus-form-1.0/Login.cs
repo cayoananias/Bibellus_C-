@@ -19,7 +19,7 @@ namespace Bibellus_form_1._0
             }
             catch (Exception Erro)
             {
-                new AvisoPopup(Erro).ShowDialog();
+                new AvisoPopup(Erro.Message).ShowDialog();
             }
         }
 
@@ -28,20 +28,19 @@ namespace Bibellus_form_1._0
             try
             {
 
-                string[] search = databasesys.MYSQLSelect("socios", $"nome LIKE '%{User_id.Text}%' AND cpf LIKE '%{User_pwd.Text}%'");
+                string[] search = databasesys.MYSQLSelect("socios", $"nome LIKE '%{User_id.Text}%' AND senha LIKE '{User_pwd.Text}'");
                 if (search.Length == 0 || User_id.Text == "" || User_pwd.Text == "")
                 {
-                    new AvisoPopup("Login errado!").ShowDialog();
+                    aviso.Text = "Usuario ou senha incorretos.\nTente novamente.";
                 }
                 else
                 {
-                    this.Hide();
-                    new Vendas_panel().Show();
+                    this.Close();
                 }
             }
             catch (Exception Erro)
             {
-                new AvisoPopup(Erro).ShowDialog();
+                new AvisoPopup(Erro.Message).ShowDialog();
             }
         }
     }

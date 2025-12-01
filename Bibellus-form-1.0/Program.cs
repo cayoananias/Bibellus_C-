@@ -20,7 +20,7 @@ namespace Bibellus_form_1._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Vendas_panel());
         }
     }
 }

@@ -12,14 +12,12 @@ namespace Bibellus_form_1._0
 {
     public partial class AvisoPopup : Form
     {
-        public AvisoPopup(Exception erro)
+        public AvisoPopup()
         {
             InitializeComponent();
-            richTextBox1.Text = erro.Message;
         }
-        public AvisoPopup(string mensagem)
+        public AvisoPopup(string mensagem) : this()
         {
-            InitializeComponent();
             richTextBox1.Text = mensagem;
         }
     }

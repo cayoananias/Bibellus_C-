@@ -49,20 +49,20 @@
             this.view_estoque});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // view_vendas
             // 
             this.view_vendas.Name = "view_vendas";
-            this.view_vendas.Size = new System.Drawing.Size(120, 21);
+            this.view_vendas.Size = new System.Drawing.Size(108, 20);
             this.view_vendas.Text = "Visualizar vendas";
             // 
             // view_estoque
             // 
             this.view_estoque.Name = "view_estoque";
-            this.view_estoque.Size = new System.Drawing.Size(126, 21);
+            this.view_estoque.Size = new System.Drawing.Size(113, 20);
             this.view_estoque.Text = "Visualisar Estoque";
             // 
             // adc_item
@@ -73,7 +73,6 @@
             this.adc_item.TabIndex = 1;
             this.adc_item.Text = "Adicionar item";
             this.adc_item.UseVisualStyleBackColor = true;
-            this.adc_item.Click += new System.EventHandler(this.button1_Click);
             // 
             // Rmv_item
             // 
@@ -101,7 +100,6 @@
             this.Concluir.TabIndex = 4;
             this.Concluir.Text = "Concluir";
             this.Concluir.UseVisualStyleBackColor = true;
-            this.Concluir.Click += new System.EventHandler(this.button4_Click);
             // 
             // list_itens
             // 
@@ -118,7 +116,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(607, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 36);
+            this.label1.Size = new System.Drawing.Size(89, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Total:";
             // 
@@ -128,7 +126,7 @@
             this.Valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Valor.Location = new System.Drawing.Point(694, 41);
             this.Valor.Name = "Valor";
-            this.Valor.Size = new System.Drawing.Size(78, 36);
+            this.Valor.Size = new System.Drawing.Size(71, 31);
             this.Valor.TabIndex = 7;
             this.Valor.Text = "0,00";
             // 
@@ -148,7 +146,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Vendas_panel";
             this.Text = "Caixa";
-            this.Load += new System.EventHandler(this.Vendas_panel_Load);
+            this.Shown += new System.EventHandler(this.Vendas_panel_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

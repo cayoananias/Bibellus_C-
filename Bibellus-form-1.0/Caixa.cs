@@ -17,19 +17,9 @@ namespace Bibellus_form_1._0
             InitializeComponent();
         }
 
-        private void Vendas_panel_Load(object sender, EventArgs e)
+        private void Vendas_panel_Shown(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            new Login().ShowDialog();
         }
     }
 }
