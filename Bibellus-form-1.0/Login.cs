@@ -43,5 +43,10 @@ namespace Bibellus_form_1._0
                 new AvisoPopup(Erro.Message).ShowDialog();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.view_vendas = new System.Windows.Forms.ToolStripMenuItem();
             this.view_estoque = new System.Windows.Forms.ToolStripMenuItem();
-            this.adc_item = new System.Windows.Forms.Button();
+            this.additem = new System.Windows.Forms.Button();
             this.Rmv_item = new System.Windows.Forms.Button();
             this.Alt_item = new System.Windows.Forms.Button();
             this.Concluir = new System.Windows.Forms.Button();
@@ -49,30 +49,31 @@
             this.view_estoque});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // view_vendas
             // 
             this.view_vendas.Name = "view_vendas";
-            this.view_vendas.Size = new System.Drawing.Size(108, 20);
+            this.view_vendas.Size = new System.Drawing.Size(134, 24);
             this.view_vendas.Text = "Visualizar vendas";
             // 
             // view_estoque
             // 
             this.view_estoque.Name = "view_estoque";
-            this.view_estoque.Size = new System.Drawing.Size(113, 20);
+            this.view_estoque.Size = new System.Drawing.Size(140, 24);
             this.view_estoque.Text = "Visualisar Estoque";
             // 
-            // adc_item
+            // additem
             // 
-            this.adc_item.Location = new System.Drawing.Point(613, 195);
-            this.adc_item.Name = "adc_item";
-            this.adc_item.Size = new System.Drawing.Size(159, 32);
-            this.adc_item.TabIndex = 1;
-            this.adc_item.Text = "Adicionar item";
-            this.adc_item.UseVisualStyleBackColor = true;
+            this.additem.Location = new System.Drawing.Point(613, 114);
+            this.additem.Name = "additem";
+            this.additem.Size = new System.Drawing.Size(159, 32);
+            this.additem.TabIndex = 1;
+            this.additem.Text = "Adicionar item";
+            this.additem.UseVisualStyleBackColor = true;
+            this.additem.Click += new System.EventHandler(this.additem_Click);
             // 
             // Rmv_item
             // 
@@ -124,7 +125,7 @@
             // 
             this.Valor.AutoSize = true;
             this.Valor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Valor.Location = new System.Drawing.Point(694, 41);
+            this.Valor.Location = new System.Drawing.Point(701, 41);
             this.Valor.Name = "Valor";
             this.Valor.Size = new System.Drawing.Size(71, 31);
             this.Valor.TabIndex = 7;
@@ -141,11 +142,12 @@
             this.Controls.Add(this.Concluir);
             this.Controls.Add(this.Alt_item);
             this.Controls.Add(this.Rmv_item);
-            this.Controls.Add(this.adc_item);
+            this.Controls.Add(this.additem);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Vendas_panel";
             this.Text = "Caixa";
+            this.Load += new System.EventHandler(this.Vendas_panel_Load);
             this.Shown += new System.EventHandler(this.Vendas_panel_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -159,7 +161,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem view_vendas;
         private System.Windows.Forms.ToolStripMenuItem view_estoque;
-        private System.Windows.Forms.Button adc_item;
+        private System.Windows.Forms.Button additem;
         private System.Windows.Forms.Button Rmv_item;
         private System.Windows.Forms.Button Alt_item;
         private System.Windows.Forms.Button Concluir;
