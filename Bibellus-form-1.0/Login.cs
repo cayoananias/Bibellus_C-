@@ -15,7 +15,7 @@ namespace Bibellus_form_1._0
         {
             try
             {
-                databasesys = new DaO("server=localhost;password=root;user=root;port=3306;database=bibellus");
+                databasesys = new DaO("server=localhost;password=;user=root;port=3306;database=bibellus");
             }
             catch (Exception Erro)
             {
