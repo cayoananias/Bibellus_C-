@@ -6,7 +6,7 @@ namespace bibellus
 {
     class Program
     {
-        static string conexaoString = "server=localhost;uid=root;pwd=root;database=bibellus";
+        static string conexaoString = "server=localhost;uid=root;pwd=;database=bibellus";
 
         static void Main(string[] args)
         {
